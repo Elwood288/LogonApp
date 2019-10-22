@@ -1,0 +1,72 @@
+<div>
+    <form [formGroup]="userProfileForm" (ngSubmit)="onSubmit(registerForm.value)">
+      
+      <div>
+        <label for="firstName">
+          First Name
+        </label>
+        
+        <input id="firstName" type="text" formControlName="firstName"/>
+        <button type="button">Edit</button>
+      </div>
+  
+      <div>
+        <label for="lastName">
+          Last Name
+        </label>
+        <input id="lastName" type="text" formControlName="lastName" />
+        <button type="button">Edit</button>
+      </div>
+  
+      <div>
+        <label for="birthday">
+          Birthday
+        </label>
+        <input id="birthday" type="text" formControlName="birthday" />
+        <button type="button">Edit</button>
+      </div>
+
+      <div>
+        <label for="homeAddress">
+          Home Address 
+        </label>
+        <input id="homeAddress" type="text" formControlName="homeAddress" />
+        <button type="button">Edit</button>
+      </div>
+
+      <div>
+        <label for="favFood">
+          Favorite Food
+        </label>
+        <input id="favFood" type="text" formControlName="favFood" />
+        <button type="button">Edit</button>
+      </div>
+
+      <div>
+        <label for="favMovie">
+          Favorite Movie
+        </label>
+        <input id="favMovie" type="text" formControlName="favMovie" />
+        <button type="button">Edit</button>
+      </div>
+
+      <div>
+        <label for="favArtist">
+          Favorite Artist
+        </label>
+        <input id="favArtist" type="text" formControlName="favArtist" />
+        <button type="button">Edit</button>
+      </div>
+
+      <div>
+        <label for="hobbies">
+          Hobbies
+        </label>
+        <input id="hobbies" type="text" formControlName="hobbies" />
+        <button type="button">Edit</button>
+      </div>
+  
+     
+      <button type="button">Save</button>
+    </form>
+  </div>
