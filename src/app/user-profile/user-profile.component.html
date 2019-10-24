@@ -1,72 +1,79 @@
 <div>
-    <form [formGroup]="userProfileForm" (ngSubmit)="onSubmit(registerForm.value)">
+    <form [formGroup]="userProfileForm" (ngSubmit)="onSubmit(userProfileForm.value)">
       
       <div>
         <label for="firstName">
-          First Name
+          First Name: 
         </label>
-        
-        <input id="firstName" type="text" formControlName="firstName"/>
-        <button type="button">Edit</button>
+        <label *ngIf="!isEditing">{{userProfileForm.get("firstName")?.value}}</label>
+        <input *ngIf="isEditing" id="firstName" type="text" formControlName="firstName"/>
+        <button (click)="toggle()" type="button">Edit</button>
       </div>
   
       <div>
         <label for="lastName">
-          Last Name
+          Last Name: 
         </label>
-        <input id="lastName" type="text" formControlName="lastName" />
-        <button type="button">Edit</button>
+        <label *ngIf="!isEditing">{{userProfileForm.get("lastName")?.value}}</label>
+        <input *ngIf="isEditing" id="lastName" type="text" formControlName="lastName" />
+        <button (click)="toggle()" type="button">Edit</button>
       </div>
   
       <div>
         <label for="birthday">
-          Birthday
+          Birthday: 
         </label>
-        <input id="birthday" type="text" formControlName="birthday" />
-        <button type="button">Edit</button>
+        <label *ngIf="!isEditing">{{userProfileForm.get("birthday")?.value}}</label>
+        <input *ngIf="isEditing" id="birthday" type="text" formControlName="birthday" />
+        <button (click)="toggle()" type="button">Edit</button>
       </div>
 
       <div>
         <label for="homeAddress">
-          Home Address 
+          Home Address:  
         </label>
-        <input id="homeAddress" type="text" formControlName="homeAddress" />
-        <button type="button">Edit</button>
+        <label *ngIf="!isEditing">{{userProfileForm.get("homeAddress")?.value}}</label>
+        <input *ngIf="isEditing" id="homeAddress" type="text" formControlName="homeAddress" />
+        <button (click)="toggle()" type="button">Edit</button>
       </div>
 
       <div>
         <label for="favFood">
-          Favorite Food
+          Favorite Food: 
         </label>
-        <input id="favFood" type="text" formControlName="favFood" />
-        <button type="button">Edit</button>
+        <label *ngIf="!isEditing">{{userProfileForm.get("favFood")?.value}}</label>
+        <input *ngIf="isEditing" id="favFood" type="text" formControlName="favFood" />
+        <button (click)="toggle()" type="button">Edit</button>
       </div>
 
       <div>
         <label for="favMovie">
-          Favorite Movie
+          Favorite Movie: 
         </label>
-        <input id="favMovie" type="text" formControlName="favMovie" />
-        <button type="button">Edit</button>
+        <label *ngIf="!isEditing">{{userProfileForm.get("favMovie")?.value}}</label>
+        <input *ngIf="isEditing" id="favMovie" type="text" formControlName="favMovie" />
+        <button (click)="toggle()" type="button">Edit</button>
       </div>
 
       <div>
         <label for="favArtist">
-          Favorite Artist
+          Favorite Artist: 
         </label>
-        <input id="favArtist" type="text" formControlName="favArtist" />
-        <button type="button">Edit</button>
+        <label *ngIf="!isEditing">{{userProfileForm.get("favArtist")?.value}}</label>
+        <input *ngIf="isEditing" id="favArtist" type="text" value="favArtist" formControlName="favArtist" />
+        <button (click)="toggle()" type="button">Edit</button>
       </div>
 
       <div>
         <label for="hobbies">
-          Hobbies
+          Hobbies: 
         </label>
-        <input id="hobbies" type="text" formControlName="hobbies" />
-        <button type="button">Edit</button>
+        <label *ngIf="!isEditing">{{userProfileForm.get("hobbies")?.value}}</label>
+        <input *ngIf="isEditing" id="hobbies" type="text" formControlName="hobbies" />
+        <button (click)="toggle()" type="button">Edit</button>
       </div>
   
      
-      <button type="button">Save</button>
+      <button type="submit">Save</button>
     </form>
   </div>
